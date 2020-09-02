@@ -1,0 +1,65 @@
+<meta charset="utf-8">
+
+<!-- JS -->
+
+<!-- The ol big boy, jQ -->
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+<!-- Our custom selection script -->
+<script src="selection.js"></script>
+
+<!--CSS -->
+<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link rel="stylesheet" href="selection.css">
+
+<!-- HTML -->
+
+<!-- This is the UI for describing a quality issue.
+     IMPORTANT: If you change this, also change html/templates/pilot-1.jinja2
+-->
+<div id="quality-selection" class="quality-selection gradient-border">
+    <p id="selection_text"></p>
+    <!-- <input type="text" id="text_input" name="quality" placeholder="type your problem"> -->
+    <label for="inp" class="inp">
+        <input type="text" id="text_input" placeholder="Quality Issue">
+        <svg width="280px" height="14px" viewBox="0 0 280 14" class="border">
+            <path
+                d="M0 3, L223.166144,3 C217.241379,3 217.899687,3 225.141066,3 C236.003135,3 241.9279,3 249.827586,3 C257.727273,3 264.639498,3 274.514107,3 C281.097179,3 281.755486,3 276.489028,3">
+            </path>
+        </svg>
+        <svg width="14px" height="12px" viewBox="0 0 14 12" class="check" id="confirm">
+            <path d="M1 7 5.5 11 L 13 1"></path>
+        </svg>
+    </label>
+    <!-- <button type="button" id="confirm_button">Confirm</button> -->
+    <!-- <span id='close'>x</span> -->
+</div>
+
+<!-- Example situation to be annotated -->
+<p id="situation-0" class="f3 outline pa4 mt5 paragraph">
+    Few, if any, industries have suffered as much as Major League Baseball over the last couple of years, especially since the start of the MLB season.  Maybe it's a generational change or something to do with a time-sensitive sport like baseball that gives people some sort of time-sucking high, but the sights, sounds and effects of Major League Baseball don't exactly tug at our heartstrings. It isn't the No. 1 sport in the United States. It's not even the most popular one. (I repeat, it's not even the most popular one.)  The falling television ratings, dwindling attendance and even a decided drop in fantasy leagues surrounding Major League Baseball all concern commissioner Rob Manfred, but what he's particularly worried about is the pandemic.  
+</p>
+
+<div>
+    <input type="checkbox" id="no_badness" name="no_badness">
+    <label for="no_badness">There is no "badness" in this text!</label>
+</div>
+<div id="situation-0-display" class="situation-display"></div>
+<input type="hidden" name="situation-0" id="situation-0-serialize">
+<input type="hidden" name="situation-0-source-id" value="${situation-0-source}">
+
+<!-- NOTE: Disabling below for now, as just using n_situations = 1. -->
+
+<!--
+<p id="situation-1" class="f3 outline pa4 mt5 paragraph">It's not too late to invest all of your assets.</p>
+<div id="situation-1-display" class="situation-display"></div>
+<input type="hidden" name="situation-1" id="situation-1-serialize">
+<input type="hidden" name="situation-1-source-id" value="${situation-1-source}">
+
+<p id="situation-2" class="f3 outline pa4 mt5 paragraph">It's not too late to invest all of your assets. La la la</p>
+<div id="situation-2-display" class="situation-display"></div>
+<input type="hidden" name="situation-2" id="situation-2-serialize">
+<input type="hidden" name="situation-2-source-id" value="${situation-2-source}">
+-->
