@@ -1,0 +1,17 @@
+.situation-text {line-height: 2}
+
+span.annotation { border-bottom:3px solid; }
+
+span.annotation span.annotation { padding-bottom:6px; }
+
+span.annotation span.annotation span.annotation { padding-bottom:12px; }
+
+span.annotation span.annotation span.annotation span.annotation { padding-bottom:18px; }
+
+span.annotation span.annotation span.annotation span.annotation span.annotation { padding-bottom:24px; }
+
+span[data-uid="001"] { border-color:#f08080; }
+span[data-uid="002"] { border-color:#dda0dd; }
+span[data-uid="003"] { border-color:#a9d6bf; }
+span[data-uid="004"] { border-color:#edbb85; }
+span[data-uid="005"] { border-color:#add8e6; }
