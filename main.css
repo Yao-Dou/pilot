@@ -1,5 +1,7 @@
 .situation-text {line-height: 2}
 
+.prompt {font-style: italic}
+
 span.annotation { border-bottom:3px solid; }
 
 span.annotation span.annotation { padding-bottom:6px; }
